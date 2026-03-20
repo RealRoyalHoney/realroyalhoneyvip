@@ -3,266 +3,262 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>RealRoyalHoneyVIP â€“ The Ultimate Power Source</title>
+  <title>RealRoyalHoneyVIP â€“ Premium Royal Honey</title>
   <style>
     * { margin:0; padding:0; box-sizing:border-box; }
-    body { font-family: 'Georgia', serif; background:#fff; color:#222; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background:#f5f1ed; color:#333; }
 
     /* NAV */
     nav {
-      background:#1a0a00;
-      padding: 14px 40px;
+      background:#1a1a1a;
+      padding: 16px 40px;
       display:flex;
       justify-content:space-between;
       align-items:center;
       position:sticky; top:0; z-index:100;
-      border-bottom: 2px solid #c8860a;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
-    .logo { color:#f0c040; font-size:1.3rem; font-weight:bold; letter-spacing:2px; text-transform:uppercase; }
-    .nav-links a { color:#f0e6c8; text-decoration:none; margin-left:24px; font-size:0.9rem; letter-spacing:1px; }
-    .nav-links a:hover { color:#f0c040; }
-    .nav-cta {
-      background: linear-gradient(135deg,#c8860a,#f0c040,#c8860a);
-      color:#1a0a00 !important;
-      padding:8px 20px;
+    .logo {
+      color:#d4a500;
+      font-size:1.4rem;
+      font-weight:bold;
+      letter-spacing:1px;
+      text-transform:uppercase;
+    }
+    nav .nav-right { display:flex; gap:30px; align-items:center; }
+    nav a {
+      color:#fff;
+      text-decoration:none;
+      font-size:0.9rem;
+      transition:color 0.2s;
+    }
+    nav a:hover { color:#d4a500; }
+    .nav-btn {
+      background:#d4a500;
+      color:#000;
+      padding:10px 24px;
       border-radius:4px;
       font-weight:bold;
+      text-decoration:none;
+      font-size:0.9rem;
+      cursor:pointer;
+      border:none;
+      transition:background 0.2s;
     }
+    .nav-btn:hover { background:#e6b800; }
 
     /* HERO */
     .hero {
-      background: linear-gradient(135deg, #1a0a00, #3a1f00, #1a0a00);
-      padding: 80px 20px;
+      background:linear-gradient(135deg,#1a1a1a 0%,#2d1b0f 100%);
+      color:#fff;
+      padding:80px 40px;
       display:flex;
+      gap:60px;
       align-items:center;
       justify-content:center;
-      gap:60px;
       flex-wrap:wrap;
-      min-height:85vh;
     }
-    .hero-text { max-width:480px; }
-    .hero-badge {
-      display:inline-block;
-      background:#c8860a;
-      color:#fff;
-      font-size:0.75rem;
-      letter-spacing:2px;
-      text-transform:uppercase;
-      padding:6px 16px;
-      border-radius:20px;
+    .hero-text { max-width:500px; }
+    .hero h1 {
+      font-size:3rem;
       margin-bottom:20px;
-    }
-    .hero-text h1 {
-      font-size:clamp(2rem,4vw,3.2rem);
-      color:#f0c040;
       line-height:1.2;
-      margin-bottom:16px;
-      letter-spacing:1px;
+      color:#d4a500;
     }
-    .hero-text h1 span { color:#fff; }
-    .hero-text p {
-      color:#c8a870;
-      font-size:1.05rem;
+    .hero p {
+      font-size:1.1rem;
+      color:#ddd;
       line-height:1.8;
-      margin-bottom:32px;
+      margin-bottom:30px;
     }
-    .hero-price {
-      font-size:2.8rem;
-      color:#f0c040;
-      font-weight:bold;
-      margin-bottom:8px;
-    }
-    .hero-price-sub { color:#a07840; font-size:0.9rem; margin-bottom:28px; }
-    .btn-buy {
-      display:inline-block;
-      background:linear-gradient(135deg,#c8860a,#f0c040,#c8860a);
-      color:#1a0a00;
-      font-weight:bold;
-      font-size:1.05rem;
-      letter-spacing:2px;
-      text-transform:uppercase;
-      padding:18px 50px;
-      border-radius:4px;
-      text-decoration:none;
-      border:none;
-      cursor:pointer;
-      box-shadow:0 4px 24px rgba(200,134,10,0.5);
-      transition:transform 0.2s, box-shadow 0.2s;
-    }
-    .btn-buy:hover { transform:translateY(-2px); box-shadow:0 8px 32px rgba(200,134,10,0.7); }
-    .hero-img-wrap { position:relative; }
-    .hero-img {
-      width:380px;
-      max-width:90vw;
-      border-radius:12px;
-      box-shadow:0 20px 60px rgba(0,0,0,0.6);
-    }
-    .hero-stars { color:#f0c040; font-size:1.1rem; margin-bottom:12px; }
-    .hero-trust { color:#a07840; font-size:0.85rem; margin-top:14px; }
-
-    /* INCLUDED */
-    .included {
-      background:#f9f5ee;
-      padding:60px 20px;
-      text-align:center;
-      border-top:3px solid #f0c040;
-    }
-    .section-label {
-      font-size:0.8rem;
-      letter-spacing:3px;
-      text-transform:uppercase;
-      color:#c8860a;
-      margin-bottom:10px;
-    }
-    .section-title {
-      font-size:1.9rem;
-      color:#1a0a00;
-      margin-bottom:40px;
-      letter-spacing:1px;
-    }
-    .included-grid {
-      display:flex;
-      gap:30px;
-      justify-content:center;
-      flex-wrap:wrap;
-      max-width:900px;
-      margin:0 auto;
-    }
-    .included-img {
-      width:260px;
-      border-radius:10px;
-      box-shadow:0 4px 20px rgba(0,0,0,0.15);
-      transition:transform 0.2s;
-    }
-    .included-img:hover { transform:scale(1.03); }
-    .included-caption {
-      background:#1a0a00;
-      color:#f0c040;
-      font-size:0.85rem;
-      letter-spacing:1px;
-      padding:10px 20px;
-      border-radius:0 0 10px 10px;
-      text-align:center;
-    }
-    .img-card { display:inline-block; }
-
-    /* FEATURES */
-    .features {
-      background:#1a0a00;
-      padding:70px 20px;
-    }
-    .features-grid {
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-      gap:30px;
-      max-width:1000px;
-      margin:0 auto;
-    }
-    .feature {
-      text-align:center;
-      padding:30px 20px;
-      border:1px solid #3a2010;
-      border-radius:10px;
-      background:#220e00;
-    }
-    .feature-icon { font-size:2.4rem; margin-bottom:14px; }
-    .feature h3 { color:#f0c040; font-size:1rem; letter-spacing:1px; text-transform:uppercase; margin-bottom:10px; }
-    .feature p { color:#a07840; font-size:0.9rem; line-height:1.6; }
-
-    /* PRODUCT DETAIL */
-    .product-detail {
-      padding:80px 20px;
-      max-width:1100px;
-      margin:0 auto;
-      display:flex;
-      gap:60px;
-      align-items:flex-start;
-      flex-wrap:wrap;
-      justify-content:center;
-    }
-    .product-gallery { display:flex; flex-direction:column; gap:12px; align-items:center; }
-    .main-img {
-      width:360px;
-      max-width:90vw;
-      border-radius:12px;
-      box-shadow:0 8px 40px rgba(0,0,0,0.15);
-      border:2px solid #f0e0a0;
-    }
-    .thumb-row { display:flex; gap:10px; }
-    .thumb {
-      width:80px;
-      height:80px;
-      object-fit:cover;
-      border-radius:6px;
-      cursor:pointer;
-      border:2px solid transparent;
-      transition:border-color 0.2s;
-    }
-    .thumb:hover, .thumb.active { border-color:#c8860a; }
-    .product-info { max-width:480px; }
-    .product-info h2 { font-size:1.8rem; color:#1a0a00; margin-bottom:8px; }
-    .product-info .stars { color:#f0c040; font-size:1.1rem; margin-bottom:4px; }
-    .product-info .review-count { color:#888; font-size:0.85rem; margin-bottom:20px; }
-    .product-info .price { font-size:2.4rem; color:#c8860a; font-weight:bold; margin-bottom:6px; }
-    .product-info .price-note { color:#888; font-size:0.85rem; margin-bottom:24px; }
-    .product-bullets { list-style:none; margin-bottom:28px; }
-    .product-bullets li {
-      padding:10px 0;
-      border-bottom:1px solid #f0e8d0;
-      color:#444;
-      font-size:0.95rem;
+    .hero-rating {
       display:flex;
       gap:10px;
       align-items:center;
+      margin-bottom:30px;
     }
-    .product-bullets li::before { content:'âœ“'; color:#c8860a; font-weight:bold; font-size:1.1rem; }
-    .qty-row { display:flex; align-items:center; gap:16px; margin-bottom:24px; }
-    .qty-btn {
-      width:36px; height:36px;
-      border:2px solid #c8860a;
-      background:none;
-      color:#c8860a;
-      font-size:1.2rem;
+    .stars { color:#d4a500; font-size:1.2rem; }
+    .rating-text { color:#bbb; font-size:0.95rem; }
+    .btn-primary {
+      display:inline-block;
+      background:#d4a500;
+      color:#000;
+      padding:14px 40px;
       border-radius:4px;
+      font-weight:bold;
+      text-decoration:none;
       cursor:pointer;
+      border:none;
+      font-size:1rem;
+      transition:background 0.2s;
+      text-transform:uppercase;
+      letter-spacing:1px;
     }
-    .qty-display { font-size:1.1rem; font-weight:bold; min-width:30px; text-align:center; }
+    .btn-primary:hover { background:#e6b800; }
+    .hero-img {
+      max-width:400px;
+      width:100%;
+      border-radius:8px;
+      box-shadow:0 10px 40px rgba(0,0,0,0.3);
+    }
+
+    /* PRODUCTS */
+    .products {
+      padding:80px 40px;
+      max-width:1200px;
+      margin:0 auto;
+      background:#fff;
+    }
+    .section-title {
+      text-align:center;
+      font-size:2.2rem;
+      margin-bottom:50px;
+      color:#1a1a1a;
+    }
+    .product-grid {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:30px;
+      margin-bottom:40px;
+    }
+    .product-card {
+      background:#f9f7f4;
+      border-radius:8px;
+      overflow:hidden;
+      box-shadow:0 2px 12px rgba(0,0,0,0.08);
+      transition:box-shadow 0.2s;
+    }
+    .product-card:hover { box-shadow:0 4px 20px rgba(0,0,0,0.12); }
+    .product-img {
+      width:100%;
+      height:280px;
+      object-fit:cover;
+      background:#eee;
+    }
+    .product-info { padding:20px; }
+    .product-name {
+      font-size:1.15rem;
+      font-weight:bold;
+      margin-bottom:8px;
+      color:#1a1a1a;
+    }
+    .product-desc {
+      font-size:0.9rem;
+      color:#666;
+      margin-bottom:12px;
+      line-height:1.5;
+    }
+    .product-price {
+      font-size:1.4rem;
+      color:#d4a500;
+      font-weight:bold;
+      margin-bottom:14px;
+    }
+    .btn-add {
+      width:100%;
+      background:#1a1a1a;
+      color:#fff;
+      padding:12px;
+      border:none;
+      border-radius:4px;
+      font-weight:bold;
+      cursor:pointer;
+      transition:background 0.2s;
+    }
+    .btn-add:hover { background:#2d2d2d; }
+
+    /* BENEFITS */
+    .benefits {
+      background:#f5f1ed;
+      padding:80px 40px;
+    }
+    .benefits-grid {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:40px;
+      max-width:1200px;
+      margin:0 auto;
+    }
+    .benefit-item {
+      text-align:center;
+    }
+    .benefit-icon { font-size:3rem; margin-bottom:16px; }
+    .benefit-title {
+      font-size:1.1rem;
+      font-weight:bold;
+      margin-bottom:10px;
+      color:#1a1a1a;
+    }
+    .benefit-text {
+      color:#666;
+      font-size:0.95rem;
+      line-height:1.6;
+    }
 
     /* REVIEWS */
-    .reviews { background:#f9f5ee; padding:70px 20px; }
+    .reviews {
+      background:#fff;
+      padding:80px 40px;
+    }
     .reviews-grid {
       display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-      gap:24px;
-      max-width:1000px;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:30px;
+      max-width:1200px;
       margin:0 auto;
     }
     .review-card {
-      background:#fff;
-      border:1px solid #e8d8b0;
-      border-radius:10px;
-      padding:28px 24px;
-      box-shadow:0 2px 12px rgba(0,0,0,0.06);
+      background:#f9f7f4;
+      padding:30px;
+      border-radius:8px;
+      border-left:4px solid #d4a500;
     }
-    .review-stars { color:#f0c040; margin-bottom:10px; }
-    .review-text { color:#444; font-size:0.95rem; line-height:1.7; margin-bottom:14px; font-style:italic; }
-    .reviewer { color:#888; font-size:0.85rem; font-weight:bold; }
-    .verified { color:#c8860a; font-size:0.75rem; margin-left:6px; }
+    .review-stars { color:#d4a500; margin-bottom:10px; font-size:1.1rem; }
+    .review-text {
+      color:#333;
+      font-size:0.95rem;
+      line-height:1.7;
+      margin-bottom:14px;
+      font-style:italic;
+    }
+    .reviewer {
+      font-weight:bold;
+      color:#1a1a1a;
+      font-size:0.9rem;
+    }
 
     /* CTA */
     .cta {
-      background:linear-gradient(135deg,#1a0a00,#3a1f00,#1a0a00);
-      padding:80px 20px;
+      background:linear-gradient(135deg,#1a1a1a 0%,#2d1b0f 100%);
+      color:#fff;
+      padding:80px 40px;
       text-align:center;
     }
-    .cta h2 { font-size:2rem; color:#f0c040; letter-spacing:2px; margin-bottom:16px; }
-    .cta p { color:#c8a870; margin-bottom:40px; font-size:1rem; line-height:1.7; }
+    .cta h2 {
+      font-size:2rem;
+      margin-bottom:20px;
+      color:#d4a500;
+    }
+    .cta p {
+      font-size:1.1rem;
+      margin-bottom:30px;
+      color:#ddd;
+    }
+
+    /* FOOTER */
+    footer {
+      background:#0a0a0a;
+      color:#aaa;
+      padding:30px 40px;
+      text-align:center;
+      font-size:0.85rem;
+    }
 
     /* MODAL */
     .modal-overlay {
       display:none;
       position:fixed; inset:0;
-      background:rgba(0,0,0,0.8);
+      background:rgba(0,0,0,0.7);
       z-index:1000;
       align-items:center;
       justify-content:center;
@@ -270,59 +266,49 @@
     .modal-overlay.active { display:flex; }
     .modal {
       background:#fff;
-      border-radius:16px;
+      border-radius:12px;
       padding:40px;
-      max-width:480px;
+      max-width:500px;
       width:90%;
-      text-align:center;
       position:relative;
     }
-    .modal-close { position:absolute; top:14px; right:18px; background:none; border:none; font-size:1.4rem; cursor:pointer; color:#888; }
-    .modal h2 { color:#1a0a00; margin-bottom:6px; font-size:1.4rem; }
-    .modal .modal-price { font-size:2rem; color:#c8860a; font-weight:bold; margin:12px 0; }
-    .modal p { color:#666; font-size:0.9rem; line-height:1.6; margin-bottom:20px; }
-    .modal-steps {
-      background:#f9f5ee;
-      border-radius:8px;
-      padding:16px;
-      text-align:left;
-      margin-bottom:24px;
-      border:1px solid #e8d8b0;
+    .modal-close {
+      position:absolute; top:14px; right:18px;
+      background:none; border:none;
+      font-size:1.6rem; cursor:pointer;
+      color:#999;
     }
-    .modal-steps p { color:#666; font-size:0.88rem; margin-bottom:4px; }
-    .modal-steps strong { color:#c8860a; }
-    .payment-btns { display:flex; flex-direction:column; gap:12px; }
-    .pay-stripe {
-      display:block;
-      background:linear-gradient(135deg,#c8860a,#f0c040,#c8860a);
-      color:#1a0a00;
-      font-weight:bold;
-      font-size:1rem;
-      letter-spacing:1px;
+    .modal h2 { color:#1a1a1a; margin-bottom:10px; font-size:1.5rem; }
+    .modal .modal-price { font-size:2.2rem; color:#d4a500; font-weight:bold; margin:16px 0; }
+    .modal p { color:#666; font-size:0.9rem; margin-bottom:16px; line-height:1.6; }
+    .payment-btn {
+      width:100%;
+      background:#d4a500;
+      color:#000;
       padding:16px;
-      border-radius:6px;
-      text-decoration:none;
       border:none;
+      border-radius:4px;
+      font-weight:bold;
       cursor:pointer;
-      transition:transform 0.2s;
+      font-size:1rem;
+      margin-bottom:12px;
+      transition:background 0.2s;
     }
-    .pay-stripe:hover { transform:translateY(-2px); }
-
-    /* FOOTER */
-    footer {
-      background:#0a0500;
-      padding:30px 20px;
+    .payment-btn:hover { background:#e6b800; }
+    .modal-note {
+      font-size:0.8rem;
+      color:#999;
       text-align:center;
-      color:#4a3010;
-      font-size:0.85rem;
-      border-top:2px solid #3a1f00;
+      margin-top:16px;
     }
-    footer span { color:#c8860a; }
 
-    @media(max-width:600px) {
-      .hero { padding:50px 16px; gap:30px; }
-      .hero-img { width:100%; }
-      .product-detail { gap:30px; }
+    @media(max-width:768px) {
+      .hero { padding:50px 20px; gap:30px; }
+      .hero h1 { font-size:2rem; }
+      .products { padding:50px 20px; }
+      .benefits { padding:50px 20px; }
+      .reviews { padding:50px 20px; }
+      .cta { padding:50px 20px; }
     }
   </style>
 </head>
@@ -331,208 +317,147 @@
 <!-- NAV -->
 <nav>
   <div class="logo">ðŸ‘‘ RealRoyalHoneyVIP</div>
-  <div class="nav-links">
-    <a href="#product">Product</a>
+  <div class="nav-right">
+    <a href="#products">Products</a>
     <a href="#reviews">Reviews</a>
-    <a href="#" class="nav-cta" onclick="openModal();return false;">Order Now</a>
+    <button class="nav-btn" onclick="openModal()">Order Now</button>
   </div>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
   <div class="hero-text">
-    <div class="hero-badge">â­ #1 Best Seller</div>
-    <h1>Royal Honey VIP<br/><span>The Ultimate Power Source</span></h1>
-    <div class="hero-stars">â˜…â˜…â˜…â˜…â˜… <span style="color:#a07840;font-size:0.85rem;">4.9 Â· 500+ reviews</span></div>
-    <p>Premium authentic Royal Honey â€” 12 individually sealed 20g sachets. Trusted by thousands. Ships fast and discreet.</p>
-    <div class="hero-price">$22.99</div>
-    <div class="hero-price-sub">Per box Â· 12 sachets Â· 20g each Â· Free discreet shipping</div>
-    <button class="btn-buy" onclick="openModal()">ðŸ›’ Add to Cart â€” $22.99</button>
-    <div class="hero-trust">ðŸ”’ Secure Checkout &nbsp;Â·&nbsp; ðŸ“¦ Discreet Shipping &nbsp;Â·&nbsp; âœ… Authentic Formula</div>
+    <h1>Royal Honey VIP Gold</h1>
+    <p>Premium authentic Royal Honey. 12 individually sealed 20g sachets. Trusted by thousands of satisfied customers worldwide.</p>
+    <div class="hero-rating">
+      <span class="stars">â˜…â˜…â˜…â˜…â˜…</span>
+      <span class="rating-text">4.9/5 Â· 500+ verified reviews</span>
+    </div>
+    <button class="btn-primary" onclick="openModal()">Order Now â€” $22.99</button>
   </div>
-  <div class="hero-img-wrap">
-    <img class="hero-img" src="img1.jpg" alt="Royal Honey VIP Gold Box" id="heroImg"/>
-  </div>
+  <img class="hero-img" src="https://images.unsplash.com/photo-1587049352846-4a222e784d38?w=500&q=80&crop=entropy&cs=tinysrgb&fit=max" alt="Royal Honey VIP Gold"/>
 </section>
 
-<!-- PRODUCT DETAIL -->
-<section class="product-detail" id="product">
-  <div class="product-gallery">
-    <img class="main-img" id="mainImg"
-      src="img1.jpg"
-      alt="Royal Honey VIP"
-    />
-    <div class="thumb-row">
-      <img class="thumb active" src="img1.jpg" onclick="switchImg(this,'img1.jpg')" alt=""/>
-      <img class="thumb" src="img2.jpg" onclick="switchImg(this,'img2.jpg')" alt=""/>
-      <img class="thumb" src="img3.jpg" onclick="switchImg(this,'img3.jpg')" alt=""/>
-      <img class="thumb" src="img4.jpg" onclick="switchImg(this,'img4.jpg')" alt=""/>
-      <img class="thumb" src="img5.jpg" onclick="switchImg(this,'img5.jpg')" alt=""/>
+<!-- PRODUCTS -->
+<section class="products" id="products">
+  <h2 class="section-title">Our Products</h2>
+  <div class="product-grid">
+    <div class="product-card">
+      <img class="product-img" src="https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=400&q=80&crop=entropy&cs=tinysrgb&fit=max" alt="Royal Honey Box"/>
+      <div class="product-info">
+        <div class="product-name">Royal Honey VIP Gold</div>
+        <div class="product-desc">12 Sachets Â· 20g Each Â· Premium Formula</div>
+        <div class="product-price">$22.99</div>
+        <button class="btn-add" onclick="openModal()">Add to Cart</button>
+      </div>
     </div>
-  </div>
-  <div class="product-info">
-    <h2>Royal Honey VIP Gold</h2>
-    <div class="stars">â˜…â˜…â˜…â˜…â˜…</div>
-    <div class="review-count">4.9 out of 5 Â· 500+ verified reviews</div>
-    <div class="price">$22.99</div>
-    <div class="price-note">Per box Â· Free discreet shipping</div>
-    <ul class="product-bullets">
-      <li>12 Single-Use Sachets per box</li>
-      <li>20g per sachet â€” premium formula</li>
-      <li>Factory sealed &amp; QC approved</li>
-      <li>100% authentic VIP formula</li>
-      <li>Ships same day in plain packaging</li>
-      <li>USA warehouse â€” fast delivery</li>
-    </ul>
-    <div class="qty-row">
-      <span style="color:#444;font-size:0.9rem;">Quantity:</span>
-      <button class="qty-btn" onclick="changeQty(-1)">âˆ’</button>
-      <span class="qty-display" id="qty">1</span>
-      <button class="qty-btn" onclick="changeQty(1)">+</button>
-      <span style="color:#c8860a;font-weight:bold;" id="totalPrice">$22.99</span>
+    <div class="product-card">
+      <img class="product-img" src="https://images.unsplash.com/photo-1471943311424-646960669fbc?w=400&q=80&crop=entropy&cs=tinysrgb&fit=max" alt="Royal Honey Single"/>
+      <div class="product-info">
+        <div class="product-name">Single Sachet</div>
+        <div class="product-desc">1 Sachet Â· 20g Â· Try It First</div>
+        <div class="product-price">$3.99</div>
+        <button class="btn-add" onclick="openModal()">Add to Cart</button>
+      </div>
     </div>
-    <button class="btn-buy" onclick="openModal()" style="width:100%;text-align:center;">ðŸ›’ Order Now</button>
-  </div>
-</section>
-
-<!-- WHAT'S INCLUDED -->
-<section class="included">
-  <div class="section-label">What You Get</div>
-  <h2 class="section-title">What's Included in Every Box</h2>
-  <div class="included-grid">
-    <div class="img-card">
-      <img class="included-img" src="img6.jpg" alt="Box Contents" style="border-radius:10px 10px 0 0;"/>
-      <div class="included-caption">12 Single-Use Sachets Â· 1 Premium Box</div>
-    </div>
-    <div class="img-card">
-      <img class="included-img" src="img7.jpg" alt="Sachets" style="border-radius:10px 10px 0 0;"/>
-      <div class="included-caption">20g Per Sachet Â· Factory Sealed</div>
+    <div class="product-card">
+      <img class="product-img" src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400&q=80&crop=entropy&cs=tinysrgb&fit=max" alt="Bulk Bundle"/>
+      <div class="product-info">
+        <div class="product-name">Bulk Bundle (3 Boxes)</div>
+        <div class="product-desc">36 Sachets Â· 60g Total Â· Save $7</div>
+        <div class="product-price">$62.97</div>
+        <button class="btn-add" onclick="openModal()">Add to Cart</button>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- FEATURES -->
-<section class="features">
-  <div style="text-align:center;margin-bottom:40px;">
-    <div class="section-label" style="color:#c8860a;">Why Us</div>
-    <h2 class="section-title" style="color:#f0c040;">Why Choose RealRoyalHoneyVIP</h2>
-  </div>
-  <div class="features-grid">
-    <div class="feature">
-      <div class="feature-icon">ðŸ”’</div>
-      <h3>Discreet Shipping</h3>
-      <p>Plain packaging, no labels. Your privacy is guaranteed every order.</p>
+<!-- BENEFITS -->
+<section class="benefits">
+  <h2 class="section-title">Why Choose RealRoyalHoneyVIP</h2>
+  <div class="benefits-grid">
+    <div class="benefit-item">
+      <div class="benefit-icon">âœ…</div>
+      <div class="benefit-title">100% Authentic</div>
+      <div class="benefit-text">Genuine formula. Factory sealed. QC approved. Premium grade.</div>
     </div>
-    <div class="feature">
-      <div class="feature-icon">âœ…</div>
-      <h3>100% Authentic</h3>
-      <p>Genuine VIP formula. Factory sealed, quality control approved.</p>
+    <div class="benefit-item">
+      <div class="benefit-icon">ðŸšš</div>
+      <div class="benefit-title">Fast Shipping</div>
+      <div class="benefit-text">Same-day processing. Discreet packaging. Ships nationwide.</div>
     </div>
-    <div class="feature">
-      <div class="feature-icon">âš¡</div>
-      <h3>Same Day Shipping</h3>
-      <p>Order before 3PM and it ships today. Get it fast when you need it.</p>
+    <div class="benefit-item">
+      <div class="benefit-icon">ðŸ”’</div>
+      <div class="benefit-title">Discreet & Safe</div>
+      <div class="benefit-text">Plain packaging. Secure checkout. Your privacy guaranteed.</div>
     </div>
-    <div class="feature">
-      <div class="feature-icon">ðŸ‘‘</div>
-      <h3>VIP Grade Formula</h3>
-      <p>The gold standard. Trusted by thousands of satisfied customers.</p>
+    <div class="benefit-item">
+      <div class="benefit-icon">ðŸ’¯</div>
+      <div class="benefit-title">Satisfaction Guaranteed</div>
+      <div class="benefit-text">Trusted by thousands. 4.9â˜… rating. Money-back guarantee.</div>
     </div>
   </div>
 </section>
 
 <!-- REVIEWS -->
 <section class="reviews" id="reviews">
-  <div style="text-align:center;margin-bottom:40px;">
-    <div class="section-label">Testimonials</div>
-    <h2 class="section-title">What Customers Are Saying</h2>
-  </div>
+  <h2 class="section-title">What Customers Say</h2>
   <div class="reviews-grid">
     <div class="review-card">
       <div class="review-stars">â˜…â˜…â˜…â˜…â˜…</div>
-      <div class="review-text">"This is the real deal. Been buying for 6 months and it never disappoints. Fast shipping too. Highly recommend."</div>
-      <div class="reviewer">Marcus T. <span class="verified">âœ“ Verified Buyer</span></div>
+      <div class="review-text">"This is the real deal. Been ordering for months and it never disappoints. Fast shipping and discreet packaging. Highly recommend!"</div>
+      <div class="reviewer">â€” Marcus T. âœ“ Verified Buyer</div>
     </div>
     <div class="review-card">
       <div class="review-stars">â˜…â˜…â˜…â˜…â˜…</div>
-      <div class="review-text">"My go-to. Great price, discreet packaging, and it actually works. Will keep ordering. Nothing else comes close."</div>
-      <div class="reviewer">Dre W. <span class="verified">âœ“ Verified Buyer</span></div>
+      <div class="review-text">"My go-to source. Great quality, even better price. The service is incredible. Will absolutely keep ordering from these guys."</div>
+      <div class="reviewer">â€” Dre W. âœ“ Verified Buyer</div>
     </div>
     <div class="review-card">
       <div class="review-stars">â˜…â˜…â˜…â˜…â˜…</div>
-      <div class="review-text">"Fast, legit, no games. Exactly what I ordered every time. The gold pack is top tier. Won't go anywhere else."</div>
-      <div class="reviewer">J. Rivera <span class="verified">âœ“ Verified Buyer</span></div>
+      <div class="review-text">"Legit seller. No games, no BS. Exactly what was ordered, shipped fast, packaging is discreet. Can't ask for better service."</div>
+      <div class="reviewer">â€” J. Rivera âœ“ Verified Buyer</div>
     </div>
   </div>
 </section>
 
 <!-- CTA -->
 <section class="cta">
-  <h2>Ready to Order?</h2>
-  <p>$22.99 per box Â· Discreet shipping Â· Authentic formula<br/>Join thousands of satisfied customers.</p>
-  <button class="btn-buy" onclick="openModal()">ðŸ›’ Order Now â€” $22.99</button>
+  <h2>Ready to Experience the Difference?</h2>
+  <p>Join thousands of satisfied customers. Order today and get fast, discreet delivery.</p>
+  <button class="btn-primary" onclick="openModal()">Order Now â€” $22.99</button>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <p>Â© 2026 <span>RealRoyalHoneyVIP</span> Â· All Rights Reserved Â· For Adults 18+ Only</p>
-  <p style="margin-top:8px;">Questions? Contact us via the order form.</p>
+  <p>Â© 2026 RealRoyalHoneyVIP Â· All Rights Reserved Â· For Adults 18+ Only</p>
+  <p>Discreet Shipping | Authentic Products | Fast Delivery | Customer Satisfaction Guaranteed</p>
 </footer>
 
 <!-- ORDER MODAL -->
 <div class="modal-overlay" id="orderModal">
   <div class="modal">
     <button class="modal-close" onclick="closeModal()">âœ•</button>
-    <div style="font-size:2rem;">ðŸ‘‘</div>
     <h2>Complete Your Order</h2>
-    <div class="modal-price" id="modalPrice">$22.99</div>
-    <p>Royal Honey VIP Gold Â· <span id="modalQty">1</span> box Â· 12 sachets Â· 20g each</p>
-    <div class="modal-steps">
-      <p><strong>How it works:</strong></p>
-      <p>1. Click the button below to pay securely</p>
-      <p>2. Enter your shipping address at checkout</p>
-      <p>3. We confirm &amp; ship within 24 hours</p>
-    </div>
-    <div class="payment-btns">
-      <a href="https://buy.stripe.com/PENDING" class="pay-stripe" id="stripeBtn" target="_blank">
-        ðŸ’³ Pay Securely with Card â€” <span id="btnPrice">$22.99</span>
-      </a>
-    </div>
-    <p style="margin-top:16px;font-size:0.8rem;color:#aaa;">ðŸ”’ Secured by Stripe Â· SSL Encrypted Â· Discreet billing</p>
+    <div class="modal-price">$22.99</div>
+    <p>Royal Honey VIP Gold Â· 12 Sachets Â· 20g Each</p>
+    <p>âœ“ Authentic Formula Â· âœ“ Factory Sealed Â· âœ“ Fast Shipping Â· âœ“ Discreet Packaging</p>
+    <button class="payment-btn" onclick="alert('Payment processing coming soon. This will connect to Stripe.')">ðŸ’³ Pay Securely</button>
+    <div class="modal-note">ðŸ”’ Secured by Stripe Â· SSL Encrypted Â· Discreet Billing</div>
   </div>
 </div>
 
 <script>
-  let qty = 1;
-  const unitPrice = 22.99;
-
-  function changeQty(delta) {
-    qty = Math.max(1, qty + delta);
-    document.getElementById('qty').textContent = qty;
-    document.getElementById('totalPrice').textContent = '$' + (qty * unitPrice).toFixed(2);
-  }
-
   function openModal() {
-    const total = (qty * unitPrice).toFixed(2);
-    document.getElementById('modalQty').textContent = qty;
-    document.getElementById('modalPrice').textContent = '$' + total;
-    document.getElementById('btnPrice').textContent = '$' + total;
     document.getElementById('orderModal').classList.add('active');
   }
-
   function closeModal() {
     document.getElementById('orderModal').classList.remove('active');
   }
-
   document.getElementById('orderModal').addEventListener('click', function(e) {
     if (e.target === this) closeModal();
   });
-
-  function switchImg(thumb, src) {
-    document.querySelectorAll('.thumb').forEach(t => t.classList.remove('active'));
-    thumb.classList.add('active');
-    document.getElementById('mainImg').src = src;
-  }
 </script>
+
 </body>
 </html>
